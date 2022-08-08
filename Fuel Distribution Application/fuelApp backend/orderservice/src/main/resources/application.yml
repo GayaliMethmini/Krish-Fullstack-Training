@@ -1,0 +1,22 @@
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: fuelDb
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092   
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+order:
+ topic:
+   name: orderService-topic
+   
+auto:
+  create:
+    topics:
+      enable: true
