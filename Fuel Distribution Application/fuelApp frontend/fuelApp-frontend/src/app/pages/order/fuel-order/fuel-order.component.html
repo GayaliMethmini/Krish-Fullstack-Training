@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="mt-5 mb-3">Submit Fuel Order</h1>
+    <form #orderform="ngForm" (ngSubmit)="submitOrder()" >
+      <div class="form-group mb-3">
+        <label for="stationId" class="form-label">Fuel Station Id</label>
+        <input type="text" class="form-control" id="stationId"
+        [(ngModel)]="order.stationId" name="stationId">
+      </div>
+      <div class="form-group mb-3">
+          <label for="stationName" class="form-label">Fuel Station Name</label>
+          <input type="text" class="form-control" id="stationName"
+          [(ngModel)]="order.stationName" name="stationName">
+      </div>
+        <div class="form-group mb-3">
+          <label for="fuelId" class="form-label">Fuel Type</label>
+          <select class="form-select" name="mySelect"aria-label="Default select example" [(ngModel)]="order.fuelId">
+            <option>Petrol</option>
+            <option>Diesel</option>
+          </select>
+        </div>
+        <div class="form-group mb-3">
+          <label for="fuelCapacity" class="form-label">Fuel Capacity</label>
+          <input type="text" class="form-control" id="fuelCapacity"
+          [(ngModel)]="order.fuelCapacity" name="fuelCapacity">
+        </div>
+      <button type="submit" class="btn btn-primary"  [disabled]="!orderform.valid">Submit Order</button>
+    </form>
+    </div>

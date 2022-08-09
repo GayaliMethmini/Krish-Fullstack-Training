@@ -1,0 +1,7 @@
+
+#container {
+  background: #222 url("/assets/home.jpg");
+  background-size: cover;
+  height:auto;
+  width:auto;
+}
